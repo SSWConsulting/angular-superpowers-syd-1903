@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'fbc-root',
@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'firebootcamp-crm';
   now = Date();
-
 }
