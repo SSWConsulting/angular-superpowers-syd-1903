@@ -30,5 +30,4 @@ export class CompanyListComponent implements OnInit {
     .subscribe(c => this.companies$ = this.companyService.getCompanies());
   }
 
-
 }

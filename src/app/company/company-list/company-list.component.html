@@ -4,22 +4,10 @@
 
   <button class="btn btn-success float-right"> Add </button>
 
-  <table class="table table-striped">
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th></th>
-    </tr>
-    <tr *ngFor="let company of companies$ | async">
-      <td> {{ company.name }} </td>
-      <td> {{ company.phone }} </td>
-      <td> {{ company.email }} </td>
-      <td class="company-row-buttons">
-        <button class="btn btn-warning"> Edit </button>
-        <button class="btn btn-danger" (click)="deleteClicked(company)"> Delete </button>
-      </td>
-    </tr>
-  </table>
+  <fbc-company-table
+  [companies]="companies$ | async"
+  (deleteClicked)="deleteClicked($event)"
+   ></fbc-company-table>
+
 </div>
 
